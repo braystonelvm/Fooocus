@@ -1,4 +1,4 @@
-import get_current_config
+
 import excel_image_generator
 import pandas as pd
 import gradio as gr
@@ -195,13 +195,6 @@ with shared.gradio_root:
                     inputs=[excel_file],
                     outputs=[excel_gallery]
                 )
-            #agregado
-            generate_excel_button.click(
-                excel_image_generator.generate_images_from_excel,
-                inputs=[excel_file, gr.State(lambda: get_current_config())],
-                outputs=[excel_gallery]
-            )
-            
             
             
             
